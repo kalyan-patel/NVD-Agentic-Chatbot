@@ -1,0 +1,86 @@
+-- OUTPUT SAMPLE --
+
+This is output showing the model's ability to remember past input and handle
+follow-up questions. I was able to ask for information under new dates without
+having to re-enter the software in question, and was able to ask for more detail
+about vulnerabilities it already gave me.
+
+
+(base) PS C:\Users\user1\Dropzone> python chatbot.py
+🤓 Hello! I am your NVD chatbot. Ask me about CVEs. (Type 'quit' to exit)
+>> give me microsoft vulnerabilities from February 2023
+
+🤓:  Here are the Microsoft vulnerabilities reported in February 2023:
+
+1. **CVE-2023-21778**
+   - **Date**: February 14, 2023
+   - **Description**: Microsoft Dynamics Unified Service Desk Remote Code Execution Vulnerability.
+
+2. **CVE-2023-23379**
+   - **Date**: February 14, 2023
+   - **Description**: Microsoft Defender for IoT Elevation of Privilege Vulnerability.
+
+3. **CVE-2023-23374**
+   - **Date**: February 14, 2023
+   - **Description**: Microsoft Edge (Chromium-based) Remote Code Execution Vulnerability.
+
+Additionally, there are two other vulnerabilities related to Active IQ Unified Manager that affect Microsoft Windows:
+
+4. **CVE-2022-23240**
+   - **Date**: February 28, 2023
+   - **Description**: Allows unauthorized users to update EMS Subscriptions via unspecified vectors.
+
+5. **CVE-2022-23239**
+   - **Date**: February 28, 2023
+   - **Description**: Allows administrative users to perform a Stored Cross-Site Scripting (XSS) attack.
+
+If you need more details on any specific vulnerability, feel free to ask!
+>> do march
+
+🤓:  Here are the Microsoft-related vulnerabilities reported in March 2023:
+
+1. **CVE-2023-24930**
+   - **Date**: March 14, 2023
+   - **Description**: Microsoft OneDrive for MacOS Elevation of Privilege Vulnerability.
+
+2. **CVE-2023-24923**
+   - **Date**: March 14, 2023
+   - **Description**: Microsoft OneDrive for Android Information Disclosure Vulnerability.
+
+3. **CVE-2023-22880**
+   - **Date**: March 16, 2023
+   - **Description**: Zoom for Windows clients (before version 5.13.3) and Zoom Rooms for Windows clients (before version 5.13.5) contain an information disclosure vulnerability related to the Microsoft Edge WebView2 runtime.
+
+4. **CVE-2023-28005**
+   - **Date**: March 22, 2023
+   - **Description**: A vulnerability in Trend Micro Endpoint Encryption Full Disk Encryption could allow an attacker with physical access to bypass Microsoft Windows' Secure Boot process.
+
+5. **CVE-2023-0620**
+   - **Date**: March 30, 2023
+   - **Description**: HashiCorp Vault and Vault Enterprise versions 0.8.0 through 1.13.1 are vulnerable to an SQL injection attack when configured with the Microsoft SQL (MSSQL) Database Storage Backend.
+
+If you need more information about any specific vulnerability, just let me know!
+>> give me more info about the one from March 30
+
+🤓:  ### CVE-2023-0620
+
+**Date**: March 30, 2023
+
+**Vulnerability Description**:
+HashiCorp Vault and Vault Enterprise versions 0.8.0 through 1.13.1 are susceptible to an SQL injection attack. This vulnerability occurs when configuring the Microsoft SQL (MSSQL) Database Storage Backend. Specifically, certain parameters are not sanitized correctly when passed to the user-defined MSSQL database during the configuration of the MSSQL plugin.
+
+**Impact**:
+An attacker could exploit this vulnerability by modifying the unsanitized parameters to execute malicious SQL commands against the affected database. This could lead to unauthorized access or manipulation of data stored in the MSSQL database.
+
+**Resolution**:
+The issue has been addressed in the following versions:
+- 1.13.1
+- 1.12.5
+- 1.11.9
+
+Users are advised to upgrade to one of these fixed versions to mitigate the risk associated with this vulnerability.
+
+If you need further assistance or exact steps to mitigate this vulnerability, feel free to ask!
+>> quit
+
+🤓: Goodbye!
