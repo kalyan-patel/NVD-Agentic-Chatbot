@@ -7,6 +7,8 @@ model with a custom tool used to make api calls to the NVD.
 
 You can run the chatbot with 'python chatbot.py', or 'python chatbot.py --dev' to get extended model output
 
+** To actually run, you'll need to supply your OpenAI API key in a .env file which has the line OPENAI_API_KEY=[your-api-key]
+
 The nvd_search tool takes several optional inputs: a cve_id, a keyword to search by,
 and start/end dates to use in the query. The tool uses the input to build the query,
 selects the relevant vulnerability data to return, and limits the results. 
